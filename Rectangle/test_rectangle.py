@@ -1,7 +1,7 @@
 import unittest
 
-from rectangle import area
-from rectangle import perimeter
+from Rectangle.rectangle import area
+from Rectangle.rectangle import perimeter
 
 class TestRectangle(unittest.TestCase):
     def test_zero_mul(self):
@@ -27,3 +27,19 @@ class TestRectangle(unittest.TestCase):
     def test_large_perimetr(self):
         res = perimeter(75384901072, 29813745390)
         self.assertEqual(res, 210397292924)
+
+    def test_negative_area(self):
+        with self.assertRaises(ValueError):
+            res = area(30, -5)
+
+    def test_negative_perimeter(self):
+        with self.assertRaises(ValueError):
+            res = perimeter(-15, -7)
+
+    def test_string_area(self):
+        with self.assertRaises(TypeError):
+            res = area("123", "wtf")
+
+    def test_string_perimetr(self):
+        with self.assertRaises(TypeError):
+            res = area("123", "wtf")
