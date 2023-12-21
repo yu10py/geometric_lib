@@ -10,7 +10,10 @@ def area(a):
             a * a: площадь квадрата
 
     '''
-    return a * a
+    if (a >= 0):
+        return a * a
+    else:
+        raise ValueError
 
 
 def perimeter(a):
@@ -24,4 +27,7 @@ def perimeter(a):
             4 * a (float): периметр квадрата
 
     '''
-    return 4 * a
+    if (a >= 0):
+        return a * 4
+    else:
+        raise ValueError

@@ -10,7 +10,10 @@ def area(a, b):
             a * b (float): площадь прямоугольника
 
     '''
-    return a * b 
+    if (a >= 0 and b >= 0):
+        return a * b
+    else:
+        raise ValueError
 
 def perimeter(a, b): 
     '''
@@ -24,4 +27,7 @@ def perimeter(a, b):
             (a + b) * 2 (float): периметр прямоугольника
 
     '''
-    return (a + b) * 2 
+    if (a >= 0 and b >= 0):
+        return (a + b) * 2
+    else:
+        raise ValueError
